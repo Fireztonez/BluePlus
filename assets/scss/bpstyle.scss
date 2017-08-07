@@ -1,0 +1,220 @@
+/*
+        BlueBE + for BeTheme
+*/
+/* 
+    Created on : 2017-07-31, 23:35:17
+    Author     : Karl Rondeau
+*/
+
+@import "BEreset";
+
+/* Variables
+-------------------------------------------------------- */
+$color_black_imp:           #1A171B;
+$themecolor_main:           #154A85;
+$themecolor_sec:            #7D9539;
+$color_body_bg:             #FFFFFF;
+$color_grey:                #636466;
+$color_grey_pale:           #cacaca;
+$color_blue_pale:           #79A4D8;
+
+$color_menu_bar:            rgba(255,255,255,0.7);
+$color_menu_link:           #FFFFFF;
+
+$button_bgcolor_white:        $color_body_bg;
+$button_bgcolor_main:         $themecolor_main;
+$button_bgcolor_sec:          $themecolor_sec;
+$button_color_dark:           #000000;
+$button_color_light:          #FFFFFF;
+$ripple_white_bg:             rgba(21, 74, 133, .5);
+/*--- INNUTILE AVEC BP-Material ;)
+--------------------------------------------
+$button_color_main:           $color_body_bg;
+$button_color_sec:            $color_grey;
+$button_color_white:          $themecolor_main;
+$button_bgcolor_main_hover:   $color_grey;
+$button_color_sec_hover:      $color_body_bg;
+$button_bgcolor_sec_hover:    $color_grey;
+$button_color_white_hover:    $color_body_bg;
+$button_bgcolor_white_hover:  $themecolor_main;
+*/
+$button_font:                 "Ubuntu Condensed", Arial, Tahoma, sans-serif;
+$button_font_size_1:          1em;
+$button_font_size_2:          1.22em;
+$button_font_size_3:          1.39em;
+$button_font_size_4:          1.56em;
+
+$color_facebook:            #4862a3;
+$color_twitter:             #5ea9dd;
+$color_linkedin:            #0177b5;
+$color_instagram:           #0177b6;
+
+$site_width: 1200px;
+$border_radius: 7px;
+$border_btn:                none;
+$top_radius:                10px 10px 0 0;
+
+$color_link: $themecolor_main;
+$color_link_hover: $color_grey;
+$transition: all 400ms;
+
+/*FONTS */
+$font: 'Montserrat', sans-serif;
+$font_title: 'Montserrat', sans-serif;
+$font_blog: 'Montserrat', sans-serif;
+
+
+
+/* Mixins
+-------------------------------------------------------- */
+@import "bpcss3.scss";
+
+
+/* Colors
+-------------------------------------------------------- */
+.color-link { color: $color_link !important; }
+.color-link-hover { color: $color_link_hover !important; }
+.color-black { color: $color_black_imp !important; }
+.color-white { color: #FFF !important; }
+.color-grey { color: $color_grey !important; }
+
+.bg-themecolor-main {background-color: $themecolor_main !important;}
+.bg-themecolor-sec {background-color: $themecolor_sec !important;}
+.bg-link { background-color: $color_link !important; }
+.bg-link-hover { background-color: $color_link_hover !important; }
+.bg-black { background-color: $color_black_imp !important; }
+.bg-white { background-color: #FFF !important; }
+.bg-grey { background-color: $color_grey !important; }
+.bg-grey-pale { background-color: $color_grey_pale !important; }
+
+
+/* i-index
+-------------------------------------------------------- */
+.z2{z-index: 2;}
+.z3{z-index: 3;}
+.z4{z-index: 4;}
+.z5{z-index: 5;}
+.z6{z-index: 6;}
+
+/* General
+-------------------------------------------------------- */
+:not(.home) .header-transparent #Top_bar .top_bar_left {
+    background: $color_menu_bar !important;
+}
+
+.header-transparent #Top_bar .top_bar_right {
+    top: -4px;
+    background: $color_body_bg !important;
+}
+
+#Top_bar .top_bar_right:before {
+    background: rgba(255,255,255,0.95) !important;
+}
+
+.no-margin {
+    margin:0px;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0px;
+}
+
+.border5 {
+    border: solid;
+    border-width: 5px;
+    &.no-border-top {
+        border-top: none;
+    }
+    &.border-themecolor-main {
+        border-color: $themecolor_main;
+    }
+    &.border-themecolor-sec {
+        border-color: $themecolor_sec;
+    }
+}
+
+.inner-border {
+    box-sizing: border-box;
+}
+
+.top-radius {
+    border-radius: $top_radius;
+}
+
+.max-width-667 {
+    max-width: 667px;
+    margin: auto;
+}
+
+.section-max-width-1920 div.mcb-section-inner {
+    max-width: 1920px;
+    margin: auto;
+}
+
+.no-float {
+    float: none;
+}
+
+
+/* PAGES SECTIONS
+-------------------------------------------------------- */
+
+
+.wrap-inner-{
+    &max-width-667 div.mcb-wrap-inner {
+        max-width: 667px;
+        margin: auto;
+    }
+    &med-shadow div.mcb-wrap-inner {
+        display: table;
+        @include box-shadow("0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.3)");
+    }
+    &bg-themecolor-main div.mcb-wrap-inner {background-color: $themecolor_main !important;}
+    &bg-themecolor-sec div.mcb-wrap-inner {background-color: $themecolor_sec !important;}
+}
+
+/* BOUTONS
+-------------------------------------------------------- */
+
+.button {
+    border: solid red;
+}
+
+
+
+/* SHADOWS
+-------------------------------------------------------- */
+
+.big-shadow {
+    @include box-shadow("0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.3)");
+}
+
+.med-shadow {
+    @include box-shadow("0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.3)");
+}
+
+
+.shadow-depth-1 {
+    @include box-shadow("0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2)");
+}
+.shadow-depth-2 {
+    @include box-shadow("0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3)");
+}
+.shadow-depth-3 {
+    @include box-shadow("0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.3)");
+}
+.shadow-depth-4 {
+    @include box-shadow("0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.3)");
+}
+.shadow-depth-5 {
+    @include box-shadow ("0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3)");
+}
+
+
+
+
+/* IMPORT OTHER FILES
+-------------------------------------------------------- */
+
+@import "bpresponsive.scss"; //RESPONSIVE
+@import "bpmd-form.scss";    //Material style form
